@@ -1,10 +1,13 @@
 body {
   font-size: 16px;
-  line-height: 1.4em;
-  letter-spacing: .08em;
+  line-height: 1.4rem;
+  letter-spacing: .08rem;
+  min-height: 100%;
+}
+
+* {
   padding: 0;
   margin: 0;
-  min-height: 100%;
 }
 
 .full {
@@ -14,7 +17,7 @@ body {
 
 .container {
   flex-direction: column;
-  padding: 10px;
+  padding: 50px 40px 10px;
 }
 
 .flex {
@@ -54,13 +57,14 @@ body {
 .card {
   display: block;
   text-align: center;
-  font-size: .875em;
+  font-size: .875rem;
   padding: 30px 10px 20px;
 }
 
 .card>.card-info h2 {
-  font-size: 1.625em;
-  margin-bottom: .688em;
+  font-size: 1.625rem;
+  margin-bottom: .688rem;
+  margin-top: 0.688rem;
 }
 
 .card>.card-avatar>span {
@@ -79,9 +83,11 @@ body {
 }
 
 .card-info>.list-social {
-  font-size: 1.625em;
+  font-size: 1.625rem;
   list-style: none;
   padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .list-social>li {
@@ -100,7 +106,6 @@ body {
   width: 100%;
 }
 
-
 .btn {
   border: none;
   display: block;
@@ -112,7 +117,7 @@ body {
   position: relative;
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 1rem;
   background-color: #222;
   padding: 15px 40px;
   margin: 0 auto;
@@ -123,28 +128,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
-.btn:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 490%;
-  width: 140%;
-  background: #78c7d2;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
-  transform: translateX(-98%) translateY(-25%) rotate(45deg);
-}
-
-.btn:hover:after {
-  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-  transform: translateX(-9%) translateY(-25%) rotate(45deg);
-}
-
-
-
 
 header {
   width: 40px;
@@ -198,5 +181,125 @@ ul.side-menu .text {
 
 .main-container {
   flex: 1 1 auto;
-  background-color: yellow
+  flex-direction: column;
+}
+
+.main-container .section {
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+.section>.title {
+  padding: 0.688em 0 0.688em 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.section>* {
+  padding: 0px 20px;
+}
+
+.section>.section-content {
+  padding-bottom: 0.688rem;
+}
+
+.personal-info {
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.personal-info>dd,
+.personal-info>dt {
+  flex: 50%;
+}
+
+.personal-info>dt {
+  font-weight: 700;
+}
+
+.personal-info>dd {
+  font-style: italic;
+  opacity: .65;
+}
+
+.personal-info>dt::after {
+  content: ":";
+}
+
+.timeline {
+  position: relative;
+  padding-top: 10px;
+  top: 0%;
+  left: 50px;
+  width: calc(100% - 50px);
+}
+
+.timeline .timeline-header {
+  padding-bottom: 10px;
+}
+
+.timeline .timeline-items {
+  width: 100%;
+  position: relative;
+}
+
+.timeline .timeline-header::before {
+  content: "";
+  border: solid 0.125rem;
+  border-color: #1FA184;
+  background: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  margin-left: calc(0px - 35px - 0.87rem);
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  position: absolute;
+  margin-top: -0.6rem
+}
+
+.timeline .timeline-header i {
+  position: absolute;
+  top: 10px;
+  left: calc(0px - 0.55rem);
+  font-size: 1rem;
+  line-height: 1rem
+}
+
+.timeline .timeline-items .timeline-item,
+.timeline .timeline-header {
+  border-left: solid 2px #ececec;
+  padding: 0 0 40px 30px;
+}
+
+.timeline .timeline-items .timeline-item:last-child {
+  border-left: 0.125rem;
+}
+
+.timeline .timeline-items .timeline-item .date {
+  font-size: 1rem;
+  line-height: 0.75rem;
+}
+
+.timeline .timeline-items .timeline-item::before {
+  content: "";
+  border: solid 0.125rem;
+  border-color: #1FA184;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50px;
+  font-size: 0.5rem;
+  margin-left: calc(0px - 35px - 0.125rem);
+  font-weight: 400;
+  background: #fff;
+  display: block;
+  position: absolute;
+  margin-top: -1px;
+}
+
+.timeline .timeline-items .timeline-item:last-child::before {
+  margin-left: calc(0px - 35px);
 }
