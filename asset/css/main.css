@@ -148,37 +148,6 @@ ul.top-menu>li {
   background-color: red;
 }
 
-ul.side-menu {
-  width: 40px;
-  list-style: none;
-  padding: 0;
-  display: block;
-  font-size: 11px;
-  font-weight: 500;
-}
-
-ul.side-menu>li {
-  position: relative;
-  text-align: center;
-  display: block;
-}
-
-ul.side-menu .icon {
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  text-align: center;
-  vertical-align: bottom;
-}
-
-ul.side-menu .icon:hover {
-  border: solid 1px;
-}
-
-ul.side-menu .text {
-  display: none;
-}
-
 .main-container {
   flex: 1 1 auto;
   flex-direction: column;
@@ -302,4 +271,44 @@ ul.side-menu .text {
 
 .timeline .timeline-items .timeline-item:last-child::before {
   margin-left: calc(0px - 35px);
+}
+
+#Side-menu {
+  height: 100%;
+  margin: 0px 20px;
+}
+
+ul.side-menu {
+  list-style: none;
+  padding: 0;
+  display: block;
+  font-weight: 500;
+}
+
+ul.side-menu>li {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
+  padding: 5px;
+  border: solid 2px;
+  border-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px #00000033;
+}
+
+ul.side-menu .icon {
+  padding: 5px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+ul.side-menu li:hover {
+  border: solid 2px;
+  border-color: #1FA184;
+}
+
+ul.side-menu .text {
+  display: none;
 }
