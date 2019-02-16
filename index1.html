@@ -1,30 +1,18 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/skin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
   <!-- Font awesome 4.7.0 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="asset/css/main.css">
+  <script src="asset/js/main.js"></script>
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <!-- Add your site or application content here -->
   <div class="container flex">
     <header class="header">
       <nav class="navbar" style="display:none;">
@@ -43,7 +31,7 @@
           <aside class="card">
             <div class="card-avatar">
               <span>
-                <img src="img/avatar.jpg" alt="avatar" sizes="">
+                <img src="asset/img/avatar.jpg" alt="avatar" sizes="">
               </span>
             </div>
             <div class="card-info">
@@ -123,31 +111,41 @@
               </div>
             </div>
           </section>
+          <section class="section" id="Experience">
+            <h2 class="title">Experience</h2>
+          </section>
+
           <section class="section" id="Contact">
             <h2 class="title">Contact Me</h2>
-
-            <div class="section-content">
-              <div class="form">
-                <div class="input-form">
-                  <input type="text" name="name" id="" required><span class="label">Full Name</span>
+            <div class="form">
+              <div class="input-form">
+                <span class="label">Full Name</span>
+                <div class="input">
+                  <input type="text" name="name" id="">
                 </div>
-                <div class="input-form">
-                  <input type="text" name="email" id="" required>
-                  <label>Email</label>
+              </div>
+              <div class="input-form">
+                <span class="label"></span>
+                <div class="input">
+                  <input type="email" name="email" id="">
                 </div>
-                <div class="input-form">
-                  <input type="text" name="" id="" required>
-                  <span class="label">Subjects</span>
+              </div>
+              <div class="input-form">
+                <span class="label">Subjects</span>
+                <div class="input">
+                  <input type="text" name="" id="">
                 </div>
-                <div class="input-form">
-                  <textarea name="" id="" cols="30" required></textarea>
-                  <span class="label">Your Message</span>
+              </div>
+              <div class="text-area-form">
+                <span class="label">Your Message</span>
+                <div class="text-area">
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
               </div>
             </div>
           </section>
         </div>
-        <div class="" id="Side-menu">
+        <div class="">
           <ul class="side-menu">
             <li>
               <span class="icon fa fa-address-book" aria-hidden="true"></span>
@@ -177,30 +175,6 @@
     <footer></footer>
   </div>
 
-
-
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
-
-  </script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () {
-      ga.q.push(arguments)
-    };
-    ga.q = [];
-    ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview')
-
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>
