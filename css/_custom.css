@@ -48,7 +48,7 @@ body {
 }
 
 #Side-card {
-  flex: 0 1 300px;
+  min-width: 300px;
   height: 100%;
   margin: 0px 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
@@ -188,6 +188,7 @@ ul.top-menu>li {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 .personal-info>dd,
@@ -399,6 +400,7 @@ ul.side-menu .text {
 
 .skills {
   display: table;
+  width: 100%;
   margin: 1rem 0px 2rem;
   border-collapse: collapse;
   table-layout: fixed
@@ -411,6 +413,7 @@ ul.side-menu .text {
 }
 
 .skill .name {
+  width: 33%;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
