@@ -1,4 +1,4 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -21,29 +21,14 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /.jsx?$/,
-        include: [
-          path.resolve(__dirname, 'src')
-        ],
-        exclude: [
-          path.resolve(__dirname, 'node_modules')
-        ],
-        loader: 'babel-loader',
-        query: {
-          presets: [
-            ["@babel/env", {
-              "targets": {
-                "browsers": "last 2 chrome versions"
-              }
-            }]
-          ]
-        }
-      },
-      {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader'
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {}
+          },
+        ]
       },
       {
         test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
@@ -52,10 +37,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({
+      filename: "style.css",
+    }),
     new CopyPlugin([{
       from: 'src/img/',
       to: 'img/'
     }, ]),
+    new CleanWebpackPlugin(pathsToClean, cleanOptions)
   ],
 };

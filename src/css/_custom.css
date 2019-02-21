@@ -48,7 +48,7 @@ body {
 }
 
 #Side-card {
-  min-width: 300px;
+  min-width: 250px;
   height: 100%;
   margin: 0px 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
@@ -70,7 +70,7 @@ body {
 }
 
 .card>.card-info h2 {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   margin-bottom: .688rem;
   margin-top: 0.688rem;
 }
