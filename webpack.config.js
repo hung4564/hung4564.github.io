@@ -21,13 +21,30 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.css$/,
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+      },
+      {
+        "test": /\.tsx?$/,
+        "exclude": /node_modules/,
+        "use": {
+          "loader": "ts-loader",
+          "options": {
+            "transpileOnly": true
+          }
+        }
+      },
+      {
+        test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {}
           },
+          "sass-loader"
         ]
       },
       {

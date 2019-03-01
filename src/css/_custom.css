@@ -184,7 +184,6 @@ ul.top-menu>li {
 }
 
 .personal-info {
-  max-width: 300px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
