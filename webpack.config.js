@@ -20,6 +20,10 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'bundle.js',
   },
+  devServer: {
+    contentBase: path.join(__dirname),
+    compress: true,
+  },
   module: {
     rules: [{
         enforce: 'pre',
@@ -55,13 +59,16 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
     new CopyPlugin([{
       from: 'src/img/',
       to: 'img/'
-    }, ]),
-    new CleanWebpackPlugin(pathsToClean, cleanOptions)
+    }, {
+      from: 'index.html',
+      to: ''
+    }]),
   ],
 };
