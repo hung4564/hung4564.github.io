@@ -58,7 +58,7 @@ body {
 }
 
 .card {
-  background-color: #1FA184
+  background-color: #1FA182
 }
 
 .card {
@@ -200,7 +200,7 @@ ul.top-menu>li {
 .personal-info dd,
 .personal-info dt {
   display: inline-block;
-  min-width: 20%;
+  min-width: 30%;
 }
 
 .personal-info dt {

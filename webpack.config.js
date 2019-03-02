@@ -2,6 +2,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pathsToClean = ['dist'];
 const cleanOptions = {
@@ -17,12 +18,13 @@ module.exports = {
   watch: true,
   output: {
     path: __dirname + '/dist',
-    publicPath: '/dist/',
+    publicPath: '/',
     filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.join(__dirname),
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
+    watchContentBase: true
   },
   module: {
     rules: [{
@@ -66,9 +68,9 @@ module.exports = {
     new CopyPlugin([{
       from: 'src/img/',
       to: 'img/'
-    }, {
-      from: 'index.html',
-      to: ''
-    }]),
+    }, ]),
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
   ],
 };
