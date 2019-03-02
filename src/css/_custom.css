@@ -8,7 +8,7 @@ body {
   font-size: 16px;
   line-height: 1.4rem;
   letter-spacing: .08rem;
-  min-height: 100%;
+  min-height: 100vh;
   font-family: 'Roboto', Helvetica, sans-serif;
 }
 
@@ -21,6 +21,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 
 .container {
   flex-direction: column;
@@ -40,7 +41,10 @@ body {
   padding: 0;
   margin: 0;
   flex-direction: row;
-  justify-content: space-around;
+}
+
+.flex.row .timeline {
+  flex: 50%;
 }
 
 .text-upper {
@@ -50,7 +54,6 @@ body {
 #Side-card {
   min-width: 250px;
   height: 100%;
-  margin: 0px 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
 }
 
@@ -163,7 +166,10 @@ ul.top-menu>li {
 .main-container {
   flex: 1 1 auto;
   flex-direction: column;
+  padding: 0px 20px;
+
 }
+
 
 .main-container .section {
   margin-bottom: 1rem;
@@ -180,22 +186,24 @@ ul.top-menu>li {
 }
 
 .section>.section-content {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+.section .section-text {
+  padding: 20px 0px;
 }
 
 .personal-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  list-style: none;
 }
 
-.personal-info>dd,
-.personal-info>dt {
-  flex: 50%;
+.personal-info dd,
+.personal-info dt {
+  display: inline-block;
+  min-width: 20%;
 }
 
-.personal-info>dt {
+.personal-info dt {
   font-weight: 700;
 }
 
@@ -204,14 +212,15 @@ ul.top-menu>li {
   opacity: .65;
 }
 
-.personal-info>dt::after {
+.personal-info dt::after {
   content: ":";
 }
+
 
 .timeline {
   box-sizing: border-box;
   position: relative;
-  padding: 10px 20px 10px 0px;
+  padding: 10px 20px 10px 20px;
   top: 0%;
 }
 
@@ -243,7 +252,7 @@ ul.top-menu>li {
 .timeline .timeline-header i {
   position: absolute;
   top: 10px;
-  left: calc(0px - 0.55rem);
+  left: calc(0px - 0.55rem + 20px);
   font-size: 1rem;
   line-height: 1rem
 }
@@ -258,15 +267,25 @@ ul.top-menu>li {
   border-left: 0.125rem;
 }
 
-.timeline .timeline-items .timeline-item .title {
-  font-size: 1rem;
-  line-height: 0.75rem;
+.timeline .timeline-items .timeline-item .sub-title {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
   font-weight: 700;
 }
 
-.timeline .timeline-items .timeline-item .sub-title {
+.timeline .timeline-items .timeline-item .title {
+  font-size: 1rem;
+  padding-top: 5px;
+  font-weight: 700;
+}
+
+.timeline-item .name {
   font-size: 0.8rem;
-  padding: 5px 0px;
+}
+
+.timeline .content {
+  font-size: 0.8rem;
+  opacity: 0.65;
 }
 
 .sub-title .date {
@@ -281,12 +300,11 @@ ul.top-menu>li {
   content: "";
   border: solid 0.125rem;
   border-color: #1FA184;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50px;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   margin-left: calc(0px - 35px - 0.125rem);
-  font-weight: 400;
   background: #fff;
   display: block;
   position: absolute;
@@ -423,25 +441,18 @@ ul.side-menu .text {
   vertical-align: middle;
 }
 
-.hobbies {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
-.hobbies .hobby {
-  padding: 10px;
-  text-align: center;
-}
+@media (max-width:700px) {
+  .flex.row {
+    flex-direction: column !important;
+  }
 
-.hobby .icon {
-  display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  font-size: 1rem;
-  background: #1FA184;
-  color: #fff;
-  border-radius: 50%;
-  margin-bottom: 5px
+  .main .main-container {
+    padding: 20px 0px;
+  }
+
+  .personal-info dd,
+  .personal-info dt {
+    width: 40%;
+  }
 }
