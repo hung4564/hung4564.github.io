@@ -1,4 +1,5 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+/* eslint-disable no-undef */
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -17,22 +18,22 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/dist/',
-    filename: "bundle.js",
+    filename: 'bundle.js',
   },
   module: {
     rules: [{
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
       },
       {
-        "test": /\.tsx?$/,
-        "exclude": /node_modules/,
-        "use": {
-          "loader": "ts-loader",
-          "options": {
-            "transpileOnly": true
+        'test': /\.tsx?$/,
+        'exclude': /node_modules/,
+        'use': {
+          'loader': 'ts-loader',
+          'options': {
+            'transpileOnly': true
           }
         }
       },
@@ -41,10 +42,10 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {}
           },
-          "sass-loader"
+          'sass-loader'
         ]
       },
       {
@@ -55,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: 'style.css',
     }),
     new CopyPlugin([{
       from: 'src/img/',
