@@ -1,4 +1,0 @@
-[submodule "dist"]
-	path = dist
-	url = git@github.com:hung4564/hung4564.github.io.git
-	branch = gh-pages
