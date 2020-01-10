@@ -1,0 +1,19 @@
+{
+  "name": "new-year",
+  "version": "1.0.0",
+  "description": "new year firework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hung4564/hung4564.github.io.git"
+  },
+  "author": "hung.pv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hung4564/hung4564.github.io/issues"
+  },
+  "homepage": "https://github.com/hung4564/hung4564.github.io#readme"
+}

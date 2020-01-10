@@ -1,0 +1,32 @@
+  #canvastext {
+    background-color: transparent;
+    background-image: url(../img/bg.png);
+    background-position: top center, bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto, 100% auto;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  #count-down-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    z-index: 6;
+  }
