@@ -5,11 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link
+      href="http://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+      type="text/css"
+    />
+
     <link href="/asset/css/main.css" rel="stylesheet" />
+    <link href="/asset/css/soon.min.css" rel="stylesheet" />
+    <link href="/asset/css/animate.css" rel="stylesheet" />
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/asset/js/soon.min.js"></script>
+    <script src="/asset/js/moment.js"></script>
+    <script src="/asset/js/moment-timezone-with-data.js"></script>
+    <script src="/asset/js/amlich-ntt.js"></script>
+    <script src="/asset/js/requestanimframe.js"></script>
+    <script src="/asset/js/jquery.fireworks.js"></script>
+    <script src="/asset/js/jquery.textillate.js"></script>
+    <script src="/asset/js/jquery.lettering.js"></script>
   </head>
   <body>
-    <main>
+    <div class="content-logo-wrap">
+      <div class="content-logo">
+        <svg class="sgmlogo" viewBox="0 0 1100 300">
+          <!-- Symbol -->
+          <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+              Canh tý
+            </text>
+          </symbol>
+
+          <!-- Duplicate symbols -->
+          <use xlink:href="#s-text" class="text"></use>
+          <use xlink:href="#s-text" class="text"></use>
+          <use xlink:href="#s-text" class="text"></use>
+          <use xlink:href="#s-text" class="text"></use>
+          <use xlink:href="#s-text" class="text"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="" id="container">
       <canvas id="canvastext"></canvas>
 
       <div id="count-down-wrapper">
@@ -26,33 +61,11 @@
           data-labels-hours="Giờ,Giờ"
           data-labels-minutes="Phút,Phút"
           data-labels-seconds="Giây,Giây"
-          data-due="2020-01-10T25:00:00"
+          data-due="2020-01-25T00:00:00"
+          data-event-complete="happyNewYear"
         ></div>
       </div>
-    </main>
+    </div>
   </body>
-  <script>
-    var canvas = document.getElementById("canvastext"),
-      ctx = canvas.getContext("2d"),
-      W = window.innerWidth,
-      H = window.innerHeight,
-      text = "2020",
-      text2 = "Chúc Mừng Năm Mới",
-      skipCount = 4,
-      gravity = 0.2,
-      touched = !1,
-      mouse = {},
-      minDist = 20,
-      bounceFactor = 0.6;
-    canvas.height = H;
-    canvas.width = W;
-
-    $(document).ready(function() {
-      // create a simple soon counter on the supplied element
-
-      $("#count-down-wrapper .soon").attr("data-now", moment().format());
-      var soon = document.querySelectorAll("#count-down-wrapper .soon");
-      Soon.create(soon[0]);
-    });
-  </script>
+  <script src="./asset/js/main.js"></script>
 </html>
