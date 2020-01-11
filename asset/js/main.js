@@ -197,5 +197,5 @@ $(document).ready(function() {
   });
 });
 function happyNewYear() {
-  $("#container").fireworks({ sound: true, opacity: 0.9, width: "100%", height: "100%" });
+  $("#container").fireworks({ sound: true, opacity: 0.3, width: "100%", height: "100%" });
 }
